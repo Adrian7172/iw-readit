@@ -20,7 +20,7 @@ module.exports = {
           "bg-color1": "#222831",
         },
         backgroundPosition: {
-          "little-top": "0 -30px"
+          "little-top": "50% 20%"
         },
       
     },

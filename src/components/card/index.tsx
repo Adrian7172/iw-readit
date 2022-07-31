@@ -2,26 +2,25 @@ import React, { useState } from "react";
 import { AiOutlineTwitter, AiOutlineInstagram } from "react-icons/ai";
 import { GrFacebookOption } from "react-icons/gr";
 
-const Card = () => {
-  const [hover, setHover] = useState(false);
+const Card = ({Image, caption}: {Image:string, caption:string}) => {
   return (
-    <section className="group mt-10 flex justify-between">
+    <section className="group mt-14 flex justify-between flex-col md:flex-row">
       <div
         style={{
           backgroundImage:
-            "url(https://preview.colorlib.com/theme/readit/images/ximage_1.jpg.pagespeed.ic.ndb4JOHu-q.webp)",
+            `url(${Image})`,
         }}
-        className="w-[66.6666%] h-[405px] bg-cover bg-no-repeat bg-center mr-3 cursor-pointer"
+        className=" w-full md:w-[66.6666%] h-[405px] bg-cover bg-no-repeat bg-center mr-3 cursor-pointer"
       ></div>
-      <div className="w-[36%] px-7 ">
-        <h3 className="text-text-color1 font-medium text-[14px] mt-[1px]">
-          ILLUSTRATION
+      <div className="w-full md:w-[36%] md:px-7 ">
+        <h3 className="text-text-color1 font-medium text-[14px] mt-[20px] md:mt-[1px]">
+          {caption}
         </h3>
         <h1 className="text-black text-[40px] font-bold mt-[6px] group-hover:opacity-50 transition-all ease-in">
           Build a website in minutes with Adobe Templates
         </h1>
 
-        <ul className="opacity-0 w-full h-12 mt-6 flex ml-[-10px] group-hover:opacity-100 transition-all ease-in ">
+        <ul className="md:opacity-0 opacity-100 w-full h-12 mt-6 flex ml-[-10px] group-hover:opacity-100 transition-all ease-in ">
           <li className="bg-text-color2 h-full w-12 rounded-md flex items-center justify-center ml-3 cursor-pointer">
             <a>
               <AiOutlineTwitter className="w-5 h-5 " />

@@ -13,10 +13,14 @@ module.exports = {
           'nav-item': 'rgba(255, 255, 255, 0.8)',
           "text-color1": "rgba(0,0,0,.2)",
           "text-color2": "rgba(0,0,0,.05)",
-          "text-color3": "#ffd369"
+          "text-color3": "#ffd369",
+          "text-color4": "rgba(255,255,255,.7)",
+          "text-color5": "rgba(255,255,255,.05)",
+          "text-color6": "#808080",
+          "bg-color1": "#222831",
         },
         backgroundPosition: {
-          "little-top": "50% 50%"
+          "little-top": "0 -30px"
         },
       
     },

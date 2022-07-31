@@ -4,7 +4,7 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 const MiddleComponent = () => {
   return (
-    <div className="h-[800px] bg-white">
+    <div className=" bg-white">
       <div className="max-w-[1260px] m-auto px-2 sm:px-6 lg:px-8 mt-28">
         <Card />
         <ul className="w-full h-[40px] mt-32 flex items-center justify-center">

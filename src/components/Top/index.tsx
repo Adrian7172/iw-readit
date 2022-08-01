@@ -4,11 +4,11 @@ import Navbar from "./Navbar";
 
 const TopComponent = () => {
   return (
-    <div className="bg-hero-pattern h-[100vh] bg-cover bg-little-top bg-no-repeat">
-      <div className="w-full h-full bg-hero-gadient opacity-80">
+    <div className="bg-hero-pattern h-[100vh] bg-cover bg-little-top bg-no-repeat relative">
+      <div className="w-full h-full bg-hero-gadient opacity-80 absolute z-0">
+      </div>
         <Navbar />
         <Intro />
-      </div>
     </div>
   );
 };

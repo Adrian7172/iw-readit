@@ -1,7 +1,6 @@
 import React from "react";
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import { Disclosure} from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
   { name: "Home", href: "#", current: true },
@@ -15,7 +14,7 @@ const Navbar = () => {
 
   //change navbar
   const changeNavbar = () => {
-    if (window.scrollY >= 500) {
+    if (window.scrollY >= 400) {
       setScroll(true);
     } else {
       setScroll(false);

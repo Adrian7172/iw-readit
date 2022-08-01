@@ -3,8 +3,8 @@ import {CgArrowDown} from "react-icons/cg"
 
 const Intro = () => {
   return (
-    <div className="max-w-[1260px] m-auto px-2 sm:px-6 lg:px-8 ">
-      <section className="mt-[150px]  md:mt-[87px] ">
+    <div className="max-w-[1260px] m-auto px-2 sm:px-6 lg:px-8 relative">
+      <section className="mt-[150px]  md:mt-[87px] absolute z-10 ">
         <h3 className="text-[18px] font-normal text-white z-10">Hello! Welcome to</h3>
         <h1 className="text-white text-[10vw] font-bold lg:mt-[-22px] mb-4 md:mb-0">Readit blog</h1>
 

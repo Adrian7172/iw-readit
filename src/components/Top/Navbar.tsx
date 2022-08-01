@@ -11,14 +11,41 @@ const navigation = [
 ];
 
 const Navbar = () => {
+  const [scroll, setScroll] = React.useState(false);
+
+  //change navbar
+  const changeNavbar = () => {
+    if (window.scrollY >= 400) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeNavbar);
   return (
-    <Disclosure as="nav" className="bg-black md:bg-transparent">
+    <Disclosure
+      as="nav"
+      className={` ${
+        scroll
+          ? "fixed w-full top-0 bg-white transition-all ease-in bg-fixed"
+          : "w-full bg-black md:bg-transparent transition-all ease-in bg-fixed"
+      }`}
+    >
       {({ open }) => (
         <>
-          <div className="max-w-[1260px] mx-auto px-2 sm:px-6 lg:px-8 py-6">
+          <div
+            className={`max-w-[1260px] mx-auto px-2 sm:px-6 lg:px-8 ${
+              scroll ? "py-3 md:py-0" : " py-6"
+            } `}
+          >
             <div className="relative flex items-center justify-between h-5 md:h-16">
               <div className="absolute inset-y-0 left-0 flex items-center">
-                <div className="text-white text-[26px] font-black ">
+                <div
+                  className={` text-[26px] font-black ${
+                    scroll ? "text-black" : "text-white"
+                  } `}
+                >
                   Read<span className="text-text-color3">it</span>.
                 </div>
               </div>
@@ -41,8 +68,12 @@ const Navbar = () => {
                           href={item.href}
                           className={`${
                             item.current
-                              ? "text-white px-3 py-2 rounded-md text-[18px] font-normal"
-                              : "text-nav-item hover:text-yellow-300 px-3 py-2 rounded-md text-[18px] font-normal"
+                              ? ` ${
+                                  scroll ? "text-yellow-300" : "text-white"
+                                } px-3 py-2 rounded-md text-[18px] font-normal`
+                              : ` ${
+                                  scroll ? "text-black" : "text-nav-item"
+                                } hover:text-yellow-300 px-3 py-2 rounded-md text-[18px] font-normal`
                           }`}
                           aria-current={item.current ? "page" : undefined}
                         >

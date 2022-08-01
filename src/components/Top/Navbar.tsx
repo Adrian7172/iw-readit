@@ -27,9 +27,9 @@ const Navbar = () => {
       as="nav"
       className={` ${
         scroll
-          ? "fixed w-full top-0 bg-white transition-all ease-in bg-fixed z-100"
-          : "w-full bg-black md:bg-transparent transition-all ease-in bg-fixed"
-      }`}
+          ? "fixed w-full top-0 bg-white transition-all ease-in z-50"
+          : "w-full bg-black md:bg-transparent transition-all ease-in"
+      } bg-fixed`}
     >
       {({ open }) => (
         <>
@@ -72,10 +72,10 @@ const Navbar = () => {
                           className={`${
                             item.current
                               ? ` ${
-                                  scroll ? "text-yellow-300" : "text-white"
+                                  scroll ? "text-yellow-300 bg-white" : "text-white"
                                 } px-3 py-2 rounded-md text-[18px] font-normal`
                               : ` ${
-                                  scroll ? "text-black" : "text-nav-item"
+                                  scroll ? "text-black bg-white" : "text-nav-item"
                                 } hover:text-yellow-300 px-3 py-2 rounded-md text-[18px] font-normal`
                           }`}
                           aria-current={item.current ? "page" : undefined}

@@ -125,11 +125,11 @@ const Footer = () => {
         <div className="w-full md:flex md:items-center sm:items-start justify-center py-20 text-[16px] text-text-color4">
           <p>
             Copyright ©2022 All rights reserved | This template is made with
-            by&nbsp;
+            &nbsp;
           </p>
           <span className="flex items-center">
             <AiFillHeart className="" />
-            &nbsp; Colorlib
+            &nbsp; by Colorlib
           </span>
         </div>
       </div>
